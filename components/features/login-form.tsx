@@ -9,7 +9,7 @@ import {
   LoginFormValues,
   loginFormSchema,
 } from '@/lib/models';
-import { api } from '@/lib/api';
+import { api } from '@/app/api/api';
 import { Button } from '@/components/ui/button';
 import {
   Form,

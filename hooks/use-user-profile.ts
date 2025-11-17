@@ -5,14 +5,7 @@ import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import { useQuery } from '@tanstack/react-query';
 import { AxiosError } from 'axios';
-
-import { api } from '@/lib/api';
-import { IProfileResponse, profileResponseSchema } from '@/lib/models';
-
-const fetchProfile = async (): Promise<IProfileResponse> => {
-  const { data } = await api.get('/auth/me');
-  return profileResponseSchema.parse(data);
-};
+import { fetchProfile } from '@/app/api/user-api';
 
 export function useUserProfile() {
   const router = useRouter();
