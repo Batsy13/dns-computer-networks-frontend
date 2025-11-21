@@ -37,12 +37,15 @@ export function RegisterForm() {
       name: '',
       email: '',
       password: '',
+      confirmPassword: '',
     },
   });
 
   const onSubmit = async (values: RegisterFormValues) => {
     try {
-      await api.post('/auth/register', values);
+      const { confirmPassword, ...dataToSend } = values;
+      
+      await api.post('/auth/register', dataToSend);
       toast.success('Registration successful!', {
         description: 'Please log in to continue.',
       });
@@ -97,6 +100,19 @@ export function RegisterForm() {
                 render={({ field }) => (
                   <FormItem>
                     <FormLabel>Password</FormLabel>
+                    <FormControl>
+                      <Input type="password" placeholder="••••••" {...field} />
+                    </FormControl>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
+              <FormField
+                control={form.control}
+                name="confirmPassword"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Confirm Password</FormLabel>
                     <FormControl>
                       <Input type="password" placeholder="••••••" {...field} />
                     </FormControl>

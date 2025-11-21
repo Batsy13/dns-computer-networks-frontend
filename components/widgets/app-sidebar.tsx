@@ -32,7 +32,7 @@ export function AppSidebar() {
 
   if (status === "pending") {
     return (
-      <Skeleton className="flex h-full w-[16rem] bg-red-500"/>
+      <Skeleton className="flex h-full w-[18rem] bg-red-500"/>
     )
   }
 

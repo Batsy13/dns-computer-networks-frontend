@@ -6,7 +6,7 @@ export default function ProfilePage() {
   return (
     <SidebarProvider>
       <AppSidebar />
-      <div className="flex items-center justify-center p-8">
+      <div className="flex items-center justify-center p-8 w-full bg-[#f4f4f4]">
         <UserProfile />
       </div>
     </SidebarProvider>
