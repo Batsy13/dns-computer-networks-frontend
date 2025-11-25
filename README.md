@@ -76,11 +76,11 @@ It's also recommended to use a code editor like [VSCode](https://code.visualstud
 
 1.  **Clone this repository:**
     ```bash
-    git clone https://github.com/Batsy13/bat-ui.git
+    git clone https://github.com/Batsy13/dns-computer-networks-frontend.git
     ```
 2.  **Navigate to the project folder:**
     ```bash
-    cd bat-ui
+    cd dns-computer-networks-frontend
     ```
 3.  **Create a .env file. Crucial: The API URL must point to the domain name to avoid CORS issues.** 
     ```bash
